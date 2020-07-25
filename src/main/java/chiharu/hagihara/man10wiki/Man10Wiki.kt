@@ -72,7 +72,7 @@ class Man10Wiki : JavaPlugin() {
 
     fun loadConfig() {
         try {
-            wikiurl = config.getBoolean("wiki").toString()
+            wikiurl = config.getString("wiki").toString()
         } catch (e: NullPointerException) {
             logger.info("値の取得に失敗")
             e.printStackTrace()
