@@ -1,0 +1,6 @@
+name: Man10Wiki
+version: 1.0
+main: chiharu.hagihara.man10wiki.Man10Wiki
+api-version: 1.15
+commands:
+  wiki:
