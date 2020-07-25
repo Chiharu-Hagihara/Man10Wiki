@@ -10,7 +10,6 @@ import org.bukkit.plugin.java.JavaPlugin
 class Man10Wiki : JavaPlugin() {
 
     var wikiurl: String = "§c§lSetting: /wiki edit <URL HERE>"
-    var config = YamlConfiguration()
 
     override fun onEnable() {
         // Plugin startup logic
@@ -45,6 +44,7 @@ class Man10Wiki : JavaPlugin() {
         if (cmd == "reload") {
             if (p.hasPermission("wiki.op")) {
                 reloadConfig()
+                wikiurl = config.getString("wiki").toString()
                 p.sendMessage("§bMan10Wiki Config reloaded.")
             } else {
                 p.sendMessage("§cThis command can only be executed by a player with <wiki.op> privileges.")
